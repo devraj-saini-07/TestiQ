@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TestiQ</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icon/favicon-32x32.png"
+    />
+
+    <!-- link csss -->
+   
+    <!-- <link rel="stylesheet" href="./css/signup.css" /> -->
+    <link rel="stylesheet" href="./css/signupres.css" />
+
+    <!-- Authentication links  -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-database-compat.js"></script>
+  </head>
+
+  <body>
+    <div id="sign">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter Full Name" required />
+      <br />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Email- example@gmail.com "
+        required
+      />
+      <br />
+
+      <label for="pass">Password</label>
+      <input
+        type="password"
+        id="pass"
+        placeholder="Create Strong Password"
+        required
+      />
+      <br />
+      
+      <div class="btns">
+        <button id="btn">Create Account</button>
+        <button id="googleBtn" class="google">Signup with   <img src="./assets/image/google_Search.avif" alt="google" id="gicon" ></button>
+         
+      </div>
+
+      <h4 id="account">Have an account ??</h4>
+      <a href="login.html" id="logina">Login</a>
+    </div>
+    
+  </body>
+  <script type="module" src="./js/signup.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+</html>

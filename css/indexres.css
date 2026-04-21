@@ -1,0 +1,331 @@
+/* nav main page  */
+@media (max-width: 768px) {
+
+    .head1 {
+        height: 50px;
+        padding: 0 8px;
+        align-items: center;
+    }
+
+    /* LOGO */
+    #icon {
+        width: 30px;
+        margin: 0;
+    }
+
+    /* USER NAME */
+    #usern {
+        font-size: 12px;
+        margin-left: 5px;
+        white-space: nowrap;
+    }
+
+    /* 🔥 NAV LINKS FIX */
+    #navlink {
+        position: static;        /* ❗ fixed hata diya */
+        margin: 0 5px;
+        display: flex;
+        gap: 5px; 
+        display: none;
+    }
+
+    
+
+    .navtag {
+        padding: 5px;
+    }
+
+    .head1 a {
+        font-size: 12px;
+    }
+
+    /* 🔥 TIME FIX */
+    #time {
+        margin-left: auto; /* push right */
+    }
+
+    #time h2 {
+        margin: 0;
+        font-size: 11px;
+        padding: 2px;
+        white-space: nowrap;
+    }
+
+    /* PROFILE ICON */
+    #profileicon {
+        width: 25px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+}
+
+/* main page  */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 10px; /* 🔥 side space control */
+        height: auto;
+    }
+
+    #mainpg {
+        width: 100%;   /* 🔥 full width use kare */
+        height: auto;  /* ❗ vh hata diya (mobile fix) */
+        padding: 15px;
+    }
+
+    #main_text {
+        width: 100%;  /* 🔥 full space */
+        margin: 40px 10px 0 10px; /* top same feel, side tight */
+    }
+
+    #main_text h4 {
+        font-size: 22px; /* thoda shrink */
+    }
+
+    #main_text p {
+        font-size: 18px; /* readable but compact */
+    }
+
+    /* BUTTON FIX */
+    #test_btn {
+        margin: 30px auto; /* 🔥 center + no overflow */
+        display: block;
+    }
+
+    /* IMAGE (agar hai) */
+    #main_img {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        bottom: 10px;
+        left: 70%;
+        right: 20px;
+        /* margin: auto 10px; */
+    }
+}
+
+/* news section  */
+
+@media (max-width: 768px) {
+
+    /* outer box thoda wide */
+    #allscroll {
+        width: 90%;   /* pehle 55% tha */
+        height: 450px; /* thoda compact */
+        /* margin-left: 5%; */
+    }
+
+    /* 🔥 MAIN FIX → boxes chhote */
+    #detail div {
+        width: 85%;   /* pehle 95% tha */
+        height: 320px; /* height reduce */
+    }
+
+    /* text thoda adjust */
+    .heading {
+        font-size: 16px;
+    }
+
+}
+
+/* test series  */
+
+@media (max-width: 768px) {
+
+    /* heading thoda left gap */
+    #test_h2, #test_h22 {
+        margin-left: 10px;
+        margin-top: 80px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* 🔥 MAIN FIX */
+    .series {
+        grid-template-columns: 1fr; /* ek ke niche ek */
+        padding: 0 10px 0 10px; /* dono side gap */
+        row-gap: 80px; /* thoda zyada gap */
+
+    }
+
+    /* card responsive */
+    .testpack {
+        width: 100%;          /* full width */
+        max-width: 350px;     /* design same feel */
+        margin: auto;         /* center */
+        height: auto; 
+        padding-bottom: 20px; 
+        justify-self: center;       /* cut nahi hoga */
+    }
+
+    /* text thoda compact */
+    .head {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .subjects {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .discrp {
+        font-size: 15px;
+    }
+
+}
+
+/* Ai box chat  */
+
+@media (max-width: 768px) {
+
+    /* 🔥 MAIN BOX FIX */
+    #gembox {
+        width: 90%;        /* pehle 60% tha */
+        height: 200px;      /* content ke hisaab se */
+        margin: 20px auto; /* center + side gap */
+        padding: 15px;
+        justify-self: center;
+        /* margin-left: 5%; */
+    }
+
+    /* search bar adjust */
+    #uinput {
+        width: 70%;     /* input bada */
+        margin-left: 35px;
+        font-size: 14px;
+    }
+
+    /* search icon adjust */
+    #search_22 {
+        margin-left: -30px;
+        width: 20px;
+    }
+
+    /* logo */
+    #testimg {
+        width: 30px;
+    }
+
+    /* chat area */
+    #typeai {
+        max-height: 300px; /* thoda compact */
+    }
+
+    #typepara {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+
+/* official website  */
+
+@media (max-width: 768px) {
+
+    /* 🔥 MAIN BOX */
+    .web {
+        width: 90%;        /* side gap */
+        height: auto;
+        margin: 20px auto 0;
+        padding: 15px;
+        justify-self: center;
+        /* margin-left: 5%; */
+    }
+
+    /* 🔥 3 BOX PER ROW */
+    .social {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 🔥 3 in row */
+        gap: 1%;
+        justify-items: center;
+    }
+
+    /* 🔥 BOX SIZE SMALL */
+    .box {
+        width: 70%;
+        height: 70px;
+        padding: 5px;
+    }
+
+    /* 🔥 TEXT SMALL */
+    .web-link {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* 🔥 LOGO SMALL */
+    .web-link img {
+        width: 40%;
+        padding: 5px;
+    }
+
+}
+
+
+@media (max-width: 330px) {
+   .web-link {
+        font-size: 10px;
+       
+    }
+}
+
+/* footer  */
+
+@media (max-width: 768px) {
+
+    .foot {
+        width: 100%;          /* 🔥 full width nahi, thoda gap */
+        /* margin: 100px auto 0; center + top gap */
+        height: auto;        /* content ke hisaab se */
+        padding: 15px 10px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    /* bottom text thoda upar */
+    .foot p {
+        margin-top: 40px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+   .socialll {
+    gap: 14px;
+   
+  }
+
+.foot h2{
+    font-size: 18px;
+}
+
+.socialll a {
+   
+    gap: 1px;
+    font-size: 14px;
+}
+}
+
+@media (max-width: 330px) {
+    .foot p {
+        font-size: 14px;
+    }
+
+    .foot h2 {
+        font-size: 12px;
+    }
+
+    .socialll a {
+        font-size: 10px;
+    }
+
+     .socialll svg {
+    gap: 10px;
+    width: 14px;
+   
+  }
+}
+

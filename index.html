@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TestiQ</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icon/favicon-32x32.png"
+    />
+
+    <!-- Authentication links  -->
+
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-database-compat.js"></script>
+
+   
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link rel="stylesheet" href="./css/indexres.css">
+
+  </head>
+  <body>
+    <div class="head1 hide" id="mainhead">
+      <img
+        src="./assets/image/testIq_image-removebg-preview.png"
+        alt="img"
+        id="icon"
+      />
+      <h1 id="usern">Hey, Mr/Miss</h1>
+
+      <div id="navlink">
+        <a href="#" class="navtag">Home</a>
+        <a href="#test_h2" class="navtag">Exams</a>
+        <a
+          href="https://www.britannica.com/place/India"
+          target="_blank"
+          class="navtag"
+          >Reading</a
+        >
+      </div>
+      <div id="time">
+        <h2>time</h2>
+      </div>
+      <img
+        src="./assets/image/circle-user-solid-full.svg"
+        alt="pro"
+        id="profileicon"
+      />
+    </div>
+
+
+    <!-- motivation thought -->
+    <section class="container">
+      <div id="mainpg">
+        <div id="main_text">
+          <h4>Welcome to Testiq</h4>
+          <p id="moti">
+            Your smart companion for tracking growth and performance. Success
+            doesn’t come from guesswork; it comes from understanding your
+            progress and improving consistently. With Testiq, you can visualize
+            your journey through clear insights, interactive charts, and
+            meaningful analysis.
+          </p>
+
+          <button id="test_btn" class="main_btn">Guidance</button>
+        </div>
+
+        <div id="main_img">
+          <!-- image add in css  -->
+        </div>
+      </div>
+    </section>
+
+    <!-- news section  -->
+    <div id="allscroll">
+      <h3>Live News Section</h3>
+      <section id="detail">
+        <div id="one" class="detaildiv"><p class="heading"></p></div>
+        <div id="two" class="detaildiv"><p class="heading"></p></div>
+        <div id="three" class="detaildiv"><p class="heading"></p></div>
+        <div id="four" class="detaildiv"><p class="heading"></p></div>
+        <div id="five" class="detaildiv"><p class="heading"></p></div>
+        <div id="onee" class="detaildiv"><p class="heading"></p></div>
+      </section>
+    </div>
+
+    <!-- test series  -->
+    <h2 id="test_h2">Test series</h2>
+    <div class="series">
+      <div class="testpack">
+        <span
+          ><img
+            src="./assets/image/testIq_image-removebg-preview.png"
+            alt="logo"
+            class="testicon"
+        /></span>
+        <div class="head">SSC</div>
+
+        <div class="title">SSC Selection Mock Test Series</div>
+
+        <div class="subjects">
+          <div>1 Live Test</div>
+          <div>10 Maths</div>
+          <div>4 English Language</div>
+          <div>10 General Awareness</div>
+          <div>+15 more tests</div>
+        </div>
+
+        <div class="discrp">
+          This test series is designed to help candidates prepare for the SSC
+          Selection exams. It includes a variety of practice tests that cover
+          all the important topics and question types that are likely to be
+          encountered in the actual exam.
+        </div>
+
+        <button class="testbtn" id="ssc">Start Test</button>
+      </div>
+
+      <div class="testpack">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          class="testicon"
+        />
+
+        <div class="head">Railway</div>
+
+        <div class="title">Railway NTPC Mock Test Series</div>
+
+        <div class="subjects">
+          <div>2 Live Test</div>
+          <div>15 Maths</div>
+          <div>8 Reasoning</div>
+          <div>10 General Awareness</div>
+          <div>+20 more tests</div>
+        </div>
+
+        <div class="discrp">
+          Practice for Railway NTPC exams with updated mock tests. Improve
+          speed, accuracy and get exam-like experience with real pattern
+          questions.
+          <br /><br />
+        </div>
+
+        <button class="testbtn" id="railway">Start Test</button>
+      </div>
+
+      <div class="testpack">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          class="testicon"
+        />
+
+        <div class="head">MP Police</div>
+
+        <div class="title">MP Police Constable Test Series</div>
+
+        <div class="subjects">
+          <div>1 Live Test</div>
+          <div>12 GK</div>
+          <div>10 Reasoning</div>
+          <div>8 Maths</div>
+          <div>+18 more tests</div>
+        </div>
+
+        <div class="discrp">
+          Specially designed tests for MP Police exams. Cover full syllabus with
+          practice questions and boost your confidence for selection.
+        </div>
+
+        <button class="testbtn" id="mppolice">Start Test</button>
+      </div>
+
+      <div class="testpack">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          class="testicon"
+        />
+
+        <div class="head">Placement</div>
+
+        <div class="title">Placement Aptitude Test Series</div>
+
+        <div class="subjects">
+          <div>3 Live Test</div>
+          <div>20 Aptitude</div>
+          <div>15 Reasoning</div>
+          <div>10 English</div>
+          <div>+25 more tests</div>
+        </div>
+
+        <div class="discrp">
+          Crack company placement exams with aptitude, reasoning and English
+          tests. Perfect for freshers preparing for job interviews.
+        </div>
+
+        <button class="testbtn" id="placement">Start Test</button>
+      </div>
+
+      <div class="testpack">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          class="testicon"
+        />
+
+        <div class="head">Army</div>
+
+        <div class="title">Army GD Mock Test Series</div>
+
+        <div class="subjects">
+          <div>2 Live Test</div>
+          <div>10 GK</div>
+          <div>10 Maths</div>
+          <div>8 Reasoning</div>
+          <div>+15 more tests</div>
+        </div>
+
+        <div class="discrp">
+          Prepare for Army GD exams with structured mock tests. Improve your
+          performance and get ready for physical and written rounds.
+        </div>
+
+        <button class="testbtn" id="army">Start Test</button>
+      </div>
+
+      <div class="testpack">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          class="testicon"
+        />
+
+        <div class="head">JEE Main</div>
+
+        <div class="title">JEE Main Full Mock Test Series</div>
+
+        <div class="subjects">
+          <div>3 Live Test</div>
+          <div>15 Physics</div>
+          <div>15 Chemistry</div>
+          <div>20 Maths</div>
+          <div>+30 more tests</div>
+        </div>
+
+        <div class="discrp">
+          Full syllabus JEE Main test series with chapter-wise and full tests.
+          Practice regularly and boost your rank with detailed analysis.
+        </div>
+
+        <button class="testbtn" id="jee">Start Test</button>
+      </div>
+    </div>
+
+    <!-- gemini api chat  -->
+
+    <h2 id="test_h22">Ai Box</h2>
+    <div id="gembox">
+      <div id="serachbar">
+        <img
+          src="./assets/image/testIq_image-removebg-preview.png"
+          alt="logo"
+          id="testimg"
+          class="serach_ai"
+        />
+
+        <input
+          type="text"
+          placeholder="Search Your Thoughts"
+          id="uinput"
+          class="serach_ai"
+        />
+        <img
+          src="./assets/image/search_35dp_042779_FILL0_wght400_GRAD200_opsz40.svg"
+          alt="serach"
+          id="search_22"
+          class="serach_ai"
+        />
+      </div>
+
+      <div id="typeai">
+        <p id="typepara">Welcome in ai box</p>
+      </div>
+    </div>
+
+    <h2 id="test_h22">official website</h2>
+
+    <div class="web">
+      <!-- ✅ 1st Section (UNCHANGED as you said) -->
+      <div class="social">
+        <div class="box">
+          <a href="https://www.google.com" target="_blank" class="web-link">
+            <span>Google</span><br />
+            <span
+              ><img
+                src="./assets/image/google-brands-solid-full.svg"
+                alt="google"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://www.facebook.com" target="_blank" class="web-link">
+            <span>Facebook</span><br />
+            <span
+              ><img
+                src="./assets/image/facebook-brands-solid-full.svg"
+                alt="facebook"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://www.twitter.com" target="_blank" class="web-link">
+            <span>Twitter</span><br />
+            <span
+              ><img
+                src="./assets/image/twitter-brands-solid-full.svg"
+                alt="twitter"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://www.youtube.com" target="_blank" class="web-link">
+            <span>YouTube</span><br />
+            <span
+              ><img
+                src="./assets/image/youtube-brands-solid-full.svg"
+                alt="youtube"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://www.linkedin.com" target="_blank" class="web-link">
+            <span>LinkedIn</span><br />
+            <span
+              ><img
+                src="./assets/image/linkedin-brands-solid-full.svg"
+                alt="linkedin"
+            /></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ✅ 2nd Section (Govt Links - Set 1) -->
+      <div class="social">
+        <div class="box">
+          <a href="https://ssc.gov.in/" target="_blank" class="web-link">
+            <span>SSC</span><br />
+            <span
+              ><img
+                src="./assets/image/Staff_Selection_Commission_Logo.jpg"
+                alt="ssc"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a
+            href="https://joinindianarmy.nic.in"
+            target="_blank"
+            class="web-link"
+          >
+            <span>Indian Army</span><br />
+            <span
+              ><img src="./assets/image/user-tie-solid-full.svg" alt="army"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://mppolice.gov.in" target="_blank" class="web-link">
+            <span>MP Police</span><br />
+            <span
+              ><img
+                src="./assets/image/person-military-pointing-solid-full.svg"
+                alt="mp police"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://upsc.gov.in" target="_blank" class="web-link">
+            <span>UPSC</span><br />
+            <span
+              ><img
+                src="./assets/image/Union-Public-Service-Commission-UPSC-Logo-01.jpg"
+                alt="upsc"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box" style="padding-bottom: 16px">
+          <a
+            href="https://www.indianrailways.gov.in"
+            target="_blank"
+            class="web-link"
+          >
+            <span>Indian Railways</span><br />
+            <span
+              ><img src="./assets/image/IRCTC-Black.svg" alt="india"
+            /></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ✅ 3rd Section (Govt Links - Set 2) -->
+      <div class="social">
+        <div class="box">
+          <a href="https://uidai.gov.in" target="_blank" class="web-link">
+            <span>Aadhaar</span><br />
+            <span
+              ><img src="./assets/image/Aadhar-Black.svg" alt="aadhaar"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a
+            href="https://www.incometax.gov.in"
+            target="_blank"
+            class="web-link"
+          >
+            <span>Income Tax</span><br />
+            <span
+              ><img
+                src="./assets/image/Income-Tax-Department-Black.svg"
+                alt="tax"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a
+            href="https://www.epfindia.gov.in"
+            target="_blank"
+            class="web-link"
+          >
+            <span>EPFO</span><br />
+            <span><img src="./assets/image/EPFO-Black.svg" alt="epfo" /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://voters.eci.gov.in/" target="_blank" class="web-link">
+            <span>Voter ID</span><br />
+            <span
+              ><img src="./assets/image/user-tie-solid-full.svg" alt="voter"
+            /></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="https://parivahan.gov.in" target="_blank" class="web-link">
+            <span>Parivahan</span><br />
+            <span
+              ><img
+                src="./assets/image/mparivahan-svgrepo-com.svg"
+                alt="parivahan"
+            /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    
+    <footer class="foot">
+      
+    
+       <h2>Contact Us</h2>
+       <div class="socialll">
+        <a href="https://www.linkedin.com/in/devrajsaini612" target="_blank">
+          <!-- LinkedIn SVG -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10H6V17H8.34M7.17 8.66A1.34 1.34 0 1 0 7.17 6A1.34 1.34 0 0 0 7.17 8.66M18 17V13.5C18 11.57 17 10 14.87 10C13.87 10 13.19 10.5 12.92 11H12.89V10H10.65V17H13V13.27C13 12.29 13.18 11.34 14.4 11.34C15.6 11.34 15.61 12.44 15.61 13.33V17H18Z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+        
+        <a href="https://github.com/devraj-saini-07" target="_blank">
+          <!-- GitHub SVG -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M12 .5A12 12 0 0 0 8.2 23.9C8.8 24 9 23.7 9 23.4V21.8C5.7 22.5 5 20.3 5 20.3C4.5 19 3.7 18.7 3.7 18.7C2.7 18 3.8 18 3.8 18C4.9 18.1 5.5 19.1 5.5 19.1C6.5 20.8 8.2 20.3 9 20V18.7C6.3 18.4 3.5 17.3 3.5 12.6C3.5 11.2 4 10 4.8 9C4.7 8.7 4.3 7.3 4.9 5.5C4.9 5.5 6 5.2 9 7C10 6.7 11 6.6 12 6.6C13 6.6 14 6.7 15 7C18 5.2 19.1 5.5 19.1 5.5C19.7 7.3 19.3 8.7 19.2 9C20 10 20.5 11.2 20.5 12.6C20.5 17.3 17.7 18.4 15 18.7V20.7C15 21.3 15 22.7 15 23.4C15 23.7 15.2 24 15.8 23.9A12 12 0 0 0 12 .5Z"
+            />
+          </svg>
+          GitHub
+        </a>
+
+        <a href="https://www.instagram.com/devx_saini_07" target="_blank">
+          <!-- Instagram SVG -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M7 2C4.2 2 2 4.2 2 7V17C2 19.8 4.2 22 7 22H17C19.8 22 22 19.8 22 17V7C22 4.2 19.8 2 17 2H7M12 7.2A4.8 4.8 0 0 1 16.8 12A4.8 4.8 0 0 1 12 16.8A4.8 4.8 0 0 1 7.2 12A4.8 4.8 0 0 1 12 7.2M18 6.5A1.5 1.5 0 1 1 16.5 5A1.5 1.5 0 0 1 18 6.5Z"
+            />
+          </svg>
+          Instagram
+        </a>
+
+        <a
+          href="https://youtube.com/@sdsmusic2?si=UsAtywzuzNKFtZ5Q"
+          target="_blank"
+        >
+          <!-- YouTube logo -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M23.5 6.2A2.9 2.9 0 0 0 21.4 4C19.6 3.5 12 3.5 12 3.5C12 3.5 4.4 3.5 2.6 4A2.9 2.9 0 0 0 .5 6.2A30.6 30.6 0 0 0 0 12A30.6 30.6 0 0 0 .5 17.8A2.9 2.9 0 0 0 2.6 20C4.4 20.5 12 20.5 12 20.5C12 20.5 19.6 20.5 21.4 20A2.9 2.9 0 0 0 23.5 17.8A30.6 30.6 0 0 0 24 12A30.6 30.6 0 0 0 23.5 6.2M9.8 15.5V8.5L15.8 12L9.8 15.5Z"
+            />
+          </svg>
+          YouTube
+        </a>
+      </div>
+       <p>&copy; 2026 TestiQ. All rights reserved.</p>
+     
+    </footer>
+  </body>
+
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+</html>

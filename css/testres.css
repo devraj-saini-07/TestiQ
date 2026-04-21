@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a0aef4;
+    overflow: hidden; /* ❗ page scroll band */
+}
+
+/* NAVBAR */
+#navdiv {
+    width: 100%;
+    height: 50px;
+    background-color: #1E293B;
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#icon {
+    width: 45px;
+    margin: 3px 0 0 5px;
+}
+
+/* TIME RIGHT SIDE */
+.time {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+
+    margin-left: auto; /* 🔥 right shift fix */
+    margin-right: 60px;
+    position: static;
+}
+
+.time h2 {
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 0px 2px rgb(255, 0, 0);
+    margin: 0;
+}
+
+#settime {
+    margin-top: -23px;
+    margin-left: 60px;
+
+}
+
+
+
+/* MAIN GRID */
+#testmain {
+    margin-top: 50px;
+    height: calc(100vh - 50px); /* 🔥 full height fix */
+
+    display: grid;
+    grid-template-columns: 65% 30%;
+    gap: 20px;
+    padding: 20px;
+
+    overflow: hidden; /* ❗ outer scroll band */
+}
+
+/* TEST BOX */
+.test {
+    height: 100%;
+    border-radius: 14px;
+    border: 2px solid aqua;
+    background-color: #cecfca;
+
+    overflow-y: auto; /* ✅ sirf inner scroll */
+}
+
+/* SCROLL STYLE */
+#test1 {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(97, 93, 84) #4d071acf;
+}
+
+/* HEADING (UNCHANGED COLOR) */
+.head {
+    padding: 10px;
+    color: #1D4ED8;
+    font-weight: 600;
+}
+
+/* QUESTION */
+#ques {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-self: center;
+    border: #1E293B 2px solid;
+    flex-wrap: wrap;
+    margin: 15px auto 20px;
+}
+
+/* OPTIONS */
+#opt {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    border: #1E293B 2px solid;
+    margin-bottom: 20px;
+}
+
+.option {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: #2f1010 2px solid;
+    margin: 15px auto;
+}
+
+/* ACTIVE OPTION */
+.active {
+    border: #03fa5e 3px solid;
+    background-color: #8f9579e3;
+}
+
+/* BUTTON FIX */
+#btndiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 🔥 center fix */
+    align-items: center;
+   
+}
+
+.subbtn {
+    margin: 10px 0;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+    background-color: #a0aef4;
+}
+
+@media screen and (min-width: 768px) {
+    #btndiv {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+}  
+
+
+.subbtn:hover {
+    background: linear-gradient(to right, rgba(224, 19, 19, 0.836), rgba(4, 4, 220, 0.876));
+    border: none;
+}
+
+/* RIGHT PANEL */
+#test2 {
+    text-align: center;
+}
+
+/* QUESTION BOXES */
+.sec {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 5px 0px 10px 4px;
+}
+
+.qbox {
+    width: 60px;
+    height: 55px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* COLORS */
+.green { background: #4caf50; color: white; }
+.red { background: #f44336; color: white; }
+.blue { background: #2196f3; color: white; }
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+    #testmain {
+        grid-template-columns: 75% 25%; /* 🔥 right side chhota */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* right panel */
+    #test2 {
+        overflow-y: auto;
+        max-height: 100%;
+    }
+
+    /* boxes container */
+    .sec {
+        justify-content: center;
+    }
+
+    /* box size chhota */
+    .qbox {
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
+    }
+}

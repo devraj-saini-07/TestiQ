@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MOBILE FIRST */
+#sign {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 6px 4px 7px rgba(2, 18, 8, 0.4);
+
+    width: 90%;
+    background-color: rgb(5, 202, 202);
+}
+
+/* Labels & Inputs */
+#sign label,
+#sign input {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    border-color: blueviolet;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* Buttons container */
+.btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+/* Signup button */
+#btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: blueviolet;
+}
+
+/* Google button */
+.google {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: blueviolet;
+    text-align: center;
+}
+
+/* Google icon */
+#gicon {
+    width: 20px;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+/* Bottom text (no absolute!) */
+#account,
+#logina {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Login link */
+#logina {
+    display: inline-block;
+    margin-left: 10%;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 80%;
+    background-color: rgb(249, 245, 245);
+    border-radius: 10px;
+    border: 1px blueviolet solid;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    #sign {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .btns {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #btn,
+    .google {
+        width: 48%;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    #sign {
+         width: 500px;
+        margin-top: 80px;
+    }
+}
